@@ -9,6 +9,6 @@ class UserViewModelFactory(private val application: Application) : ViewModelProv
         if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
             return UserViewModel(application) as T
         }
-        throw IllegalArgumentException("Unknown ViewModel class")
+        throw IllegalArgumentException("Unknown ViewModel")
     }
 }

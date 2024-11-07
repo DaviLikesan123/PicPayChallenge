@@ -2,7 +2,7 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.6.21'
+        kotlin_version = '1.8.10'
 
         appcompat_version = '1.1.0'
         core_ktx_version = '1.2.0'
@@ -15,12 +15,12 @@ buildscript {
         picasso_version = '2.71828'
         circleimageview_version = '3.0.0'
 
-        junit_version = '4.12'
+        junit_version = '4.13.2'
         mockito_version = '2.27.0'
         mockito_kotlin_version = '2.1.0'
 
         test_runner_version = '1.1.1'
-        espresso_version = '3.1.1'
+        espresso_version = '3.5.1'
 
         koin_version = "2.0.1"
         dagger_version = "2.23.2"

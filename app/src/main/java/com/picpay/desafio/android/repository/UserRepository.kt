@@ -6,7 +6,7 @@ import com.picpay.desafio.android.model.User
 
 class UserRepository(private val userDao: UserDao, private val apiService: PicPayService) {
 
-    val users: LiveData<List<User>> = userDao.getAllUsers()
+    val users: LiveData<List<User>> = userDao.getAllUsers() 
 
     suspend fun fetchUsersFromApi() {
         try {

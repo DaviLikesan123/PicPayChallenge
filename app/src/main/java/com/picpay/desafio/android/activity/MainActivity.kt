@@ -35,7 +35,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         viewModel.fetchUsersFromApi()
 
         viewModel.users.observe(this) { users ->
-            adapter.users = users
+            //check if users are null
+            if (users != null) {
+                adapter.users = users
+            } else {
+                Toast.makeText(this, "Users not found", Toast.LENGTH_SHORT).show()
+            }
         }
 
         viewModel.loading.observe(this) { isLoading ->

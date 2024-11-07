@@ -35,9 +35,7 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 userRepository.fetchUsersFromApi()
             } catch (e: Exception) {
-                _error.value = "Erro ao buscar dados: ${e.message}"
-            } finally {
-                _loading.value = false
+                _error.value = "Error to find: ${e.message}"
             }
         }
     }
