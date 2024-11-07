@@ -24,4 +24,7 @@ interface UserDao {
 
     @Query("SELECT * FROM user ORDER BY name")
     fun getUsersOrderedByName(): LiveData<List<User>>
+
+    @Query("DELETE FROM user WHERE id = :id")
+    suspend fun deleteUserById(id: Int) : Int
 }
