@@ -13,7 +13,7 @@ class UserRepository(private val userDao: UserDao, private val apiService: PicPa
             val usersFromApi = apiService.getUsers()
             userDao.insertAll(usersFromApi)
         } catch (e: Exception) {
-            throw Exception("Dê uma olhada na sua conexão")
+            throw Exception("Network problem")
         }
     }
 }
